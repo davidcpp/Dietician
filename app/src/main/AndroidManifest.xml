@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.davidcpp.dietician">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.davidcpp.dietician.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.davidcpp.dietician.ActivitiesActivity"
+            android:label="@string/activity_activities_title"
+            android:parentActivityName="com.example.davidcpp.dietician.MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.davidcpp.dietician.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.davidcpp.dietician.DietPlanActivity"
+            android:label="@string/activity_diet_plan_title"
+            android:parentActivityName="com.example.davidcpp.dietician.MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.davidcpp.dietician.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.davidcpp.dietician.DishesActivity"
+            android:label="@string/activity_dishes_title"
+            android:parentActivityName="com.example.davidcpp.dietician.MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.davidcpp.dietician.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.davidcpp.dietician.MealPlanActivity"
+            android:label="@string/activity_meal_plan_title"
+            android:parentActivityName="com.example.davidcpp.dietician.MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.davidcpp.dietician.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.davidcpp.dietician.ProductsActivity"
+            android:label="@string/activity_products_title"
+            android:parentActivityName="com.example.davidcpp.dietician.MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.davidcpp.dietician.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.davidcpp.dietician.AddProductActivity"
+            android:label="@string/activity_products_title"
+            android:parentActivityName="com.example.davidcpp.dietician.ProductsActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.davidcpp.dietician.ProductsActivity" />
+
+        </activity>
+    </application>
+
+</manifest>

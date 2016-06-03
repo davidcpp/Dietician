@@ -1,0 +1,67 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ProductsActivity">
+
+    <item
+        android:id="@+id/menu_option_search"
+        android:orderInCategory="10"
+        android:title="@string/product_menu_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/add_product_option"
+        android:orderInCategory="1"
+        android:title="@string/add_product"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/remove_product_option"
+        android:orderInCategory="2"
+        android:title="@string/remove_product"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/view_product_option"
+        android:orderInCategory="3"
+        android:title="@string/view_products"
+        app:showAsAction="never">
+
+        <menu>
+            <item
+                android:id="@+id/view_categories_names_option"
+                android:orderInCategory="10"
+                android:title="@string/view_categories_names"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/view_products_names_option"
+                android:orderInCategory="20"
+                android:title="@string/view_products_names"
+                app:showAsAction="ifRoom" />
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/sort_products_option"
+        android:orderInCategory="4"
+        android:title="@string/sort_products"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/sort_alphabet_option"
+                android:orderInCategory="10"
+                android:title="@string/sort_alphabet"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/sort_energy_value_option"
+                android:orderInCategory="20"
+                android:title="@string/sort_energy_value"
+                app:showAsAction="ifRoom" />
+
+        </menu>
+    </item>
+
+
+</menu>

@@ -1,0 +1,108 @@
+<resources>
+
+    <!-- TODO: Duplicates of string texts of activities -->
+    <!-- section names -->
+    <string name="app_name">dietician</string>
+    <string name="activity_activities_title">Aktywności</string>
+    <string name="activity_diet_plan_title">Mój Plan</string>
+    <string name="activity_dishes_title">Moje dania</string>
+    <string name="activity_meal_plan_title">Jadłospis</string>
+    <string name="activity_products_title">Produkty</string>
+
+    <string-array name="main_menu">
+        <item>Mój Plan</item>
+        <item>Produkty</item>
+        <item>Jadłospis</item>
+        <item>Moje dania</item>
+        <item>Aktywności</item>
+
+    </string-array>
+
+    <!-- Products Menu Options -->
+    <string name="product_menu_search">Szukaj</string>
+    <string name="add_product">Dodaj</string>
+    <string name="remove_product">Usuń</string>
+    <string name="view_products">Widok</string>
+    <string name="sort_products">Sortuj</string>
+
+    <!-- Products Submenus Options -->
+
+
+    <!-- view_products -->
+    <string name="view_categories_names">Kategorie </string>
+    <string name="view_products_names">Produkty</string>
+
+    <!-- sort_products -->
+    <string name="sort_alphabet">Alfabetycznie</string>
+    <string name="sort_energy_value">Wartość energetyczna</string>
+
+
+    <!-- Product Category Names -->
+    <string name="nuts_seeds">Orzechy i ziarna</string>
+    <string name="cereal_grains_pasta">Ziarna zbóż, kasze i makarony</string>
+    <string name="beverages">Napoje</string>
+    <string name="meats">Mięso</string>
+    <string name="baked_products">Wypieki</string>
+    <string name="legumes">Rośliny strączkowe</string>
+    <string name="fishes">Ryby</string>
+    <string name="fruits">Owoce</string>
+    <string name="vegetables">Warzywa</string>
+    <string name="dairy_eggs">Nabiał i jaja</string>
+    <string name="fats_oils">Tłuszcze i oleje</string>
+
+    <!-- Meal Names ( in string-array ) -->
+    <string-array name="meal_names">
+        <item>Śniadanie</item>
+        <item>II Śniadanie</item>
+        <item>Obiad</item>
+        <item>Podwieczorek</item>
+        <item>Kolacja</item>
+    </string-array>
+
+    <!-- Dishes Names ( in string-array ) -->
+    <string-array name="dishes_names">
+        <item>Kasza gryczana z brokułami i oliwą z oliwek</item>
+        <item>Chleb żytni razowy z sałatą, ogórkiem i olejem kokosowym</item>
+    </string-array>
+
+    <!-- Dishes Names ( in string-array ) -->
+    <string-array name="activity_names">
+        <item>Jazda na rowerze</item>
+        <item>Bieganie</item>
+        <item>Spacer</item>
+    </string-array>
+
+    <!-- Product Category Names ( in string-array ) -->
+    <string-array name="products_categories_names">
+        <item>Orzechy i ziarna</item>
+        <item>Ziarna zbóż, kasze i makarony</item>
+        <item>Napoje</item>
+        <item>Mięso</item>
+        <item>Wypieki</item>
+        <item>Rośliny strączkowe</item>
+        <item>Ryby</item>
+        <item>Owoce</item>
+        <item>Warzywa</item>
+        <item>Nabiał i jaja</item>
+    </string-array>
+
+    <!-- Products arrays -->
+    <string-array name="nuts_seeds">
+        <item name="a">Orzechy brazylisjskie</item>
+        <item name="b">Orzechy Włoskie</item>
+        <item name="c">Migdały</item>
+    </string-array>
+
+    <string-array name="cereal_grains_pasta">
+        <item name="a">Kasza gryczana</item>
+        <item name="b">Kasza jaglana</item>
+        <item name="c">Ryż brązowy</item>
+    </string-array>
+
+    <!-- All products array-->
+    <array name="all_products">
+        <item>@array/nuts_seeds</item>
+        <item>@array/cereal_grains_pasta</item>
+    </array>
+
+</resources>
