@@ -6,6 +6,7 @@ package com.example.davidcpp.dietician;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +20,19 @@ import java.util.List;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
+    private static final int[] EMPTY_STATE_SET = {};
+    private static final int[] GROUP_EXPANDED_STATE_SET =
+            {android.R.attr.state_expanded};
+    private static final int[][] GROUP_STATE_SETS = {
+            EMPTY_STATE_SET, // 0
+            GROUP_EXPANDED_STATE_SET // 1
+    };
     static int b = 0;
     private Context context;
     private List<String> listDataHeader; // header titles
     // child data in format of header title, child title
     private HashMap<String, List<String>> listDataChild;
+    ExpandableListView listView;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData) {
@@ -85,13 +94,36 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         return groupPosition;
     }
 
+    @Override
+    public void onGroupExpanded(int groupPosition) {
+        super.onGroupExpanded(groupPosition);
+/*
+        ImageView v = new ImageView(context);
+
+        v.setImageResource(R.drawable.ic_action_collapse);
+        Drawable drawable = v.getDrawable();
+        listView.setGroupIndicator(drawable);
+        */
+        listView.setGroupIndicator(null);
+    }
+
+    @Override
+    public void notifyDataSetChanged() {
+        super.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onGroupCollapsed(int groupPosition) {
+        super.onGroupCollapsed(groupPosition);
+    }
+
 
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
 
         String headerTitle = (String) getGroup(groupPosition);
-        ExpandableListView listView = (ExpandableListView) parent;
+        listView = (ExpandableListView) parent;
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this.context
@@ -101,20 +133,40 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         // Setting Drawable indicator of group on position groupPosition
 
-        ImageView indicator = (ImageView) convertView.findViewById(com.example.davidcpp.dietician.R.id.ic_category_indicator);
+        View v = convertView.findViewById(com.example.davidcpp.dietician.R.id.ic_category_indicator);
+        int[] tab = new int[]{};
+        if (v != null) {
 
-/*
-        if (indicator != null) {
-            int j = getChildrenCount(groupPosition);
+            Drawable drawable;
+            ImageView indicator = (ImageView) v;
             if (getChildrenCount(groupPosition) == 0) {
+                drawable=null;
+//                listView.setGroupIndicator(null);
                 indicator.setVisibility(View.INVISIBLE);
+
             } else {
                 indicator.setVisibility(View.VISIBLE);
-                indicator.setImageResource(isExpanded ? R.drawable.ic_action_collapse : R.drawable.ic_action_expand);
+                int stateSetIndex = (isExpanded ? 1 : 0);
+                drawable = indicator.getDrawable();
+                drawable.setState(GROUP_STATE_SETS[stateSetIndex]);
+                tab = drawable.getState();
+                b = indicator.getVisibility();
             }
+
+
+
+/*
+            if (getChildrenCount(groupPosition) == 0) {
+                indicator.setImageResource(R.drawable.ic_action_expand);
+//                indicator.setVisibility(View.INVISIBLE);
+            } else {
+                indicator.setVisibility(View.VISIBLE);
+                indicator.setImageResource(isExpanded ? R.drawable.ic_action_call : R.drawable.ic_action_collapse);
+
+            }
+            */
         }
-        b=indicator.getVisibility();
-*/
+
 
         TextView lblListHeader = (TextView) convertView
                 .findViewById(com.example.davidcpp.dietician.R.id.lblListHeader);

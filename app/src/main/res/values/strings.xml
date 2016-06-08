@@ -2,7 +2,7 @@
 
     <!-- TODO: Duplicates of string texts of activities -->
     <!-- section names -->
-    <string name="app_name">dietician</string>
+    <string name="app_name">Dietician</string>
     <string name="activity_activities_title">Aktywności</string>
     <string name="activity_diet_plan_title">Mój Plan</string>
     <string name="activity_dishes_title">Moje dania</string>
